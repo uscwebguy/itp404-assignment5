@@ -1,0 +1,32 @@
+<p>{{model.artistName}} has {{model.songs.length}} songs</p>
+
+<table>
+	<tr>
+		
+		<th>Title</th>
+		<th>Price</th>
+		<th>Play Count</th>
+	</tr>
+	{{#each model.songs as |song|}}
+		<tr>
+			<td>{{song.title}}</td>
+			<td>{{song.price}}</td>
+			<td>{{song.playCount}}</td>
+		</tr>
+	{{/each}}
+</table>
+
+<table>
+	<tr>
+		<th></th>
+		<th></th>
+		<th>Title</th>
+		<th>Price</th>
+		<th>Play Count</th>
+	</tr>
+	{{#each model.songs as |song|}}
+		{{#song-item song=song}}{{/song-item}}
+	{{/each}}
+</table>
+
+{{outlet}}

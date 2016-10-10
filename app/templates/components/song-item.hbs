@@ -1,0 +1,18 @@
+<td>
+		{{#if isPopular}}
+			{{fa-icon "star" size=1}}
+		{{/if}}
+	</td>
+<td>
+		{{#if isAffordable}}
+			$
+		{{else}}
+			$$
+		{{/if}}
+	</td>
+	
+	<td>{{song.title}}</td>
+	<td>{{song.price}}</td>
+	<td>{{song.playCount}}</td>
+	
+	
